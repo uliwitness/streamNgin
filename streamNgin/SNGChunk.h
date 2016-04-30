@@ -29,4 +29,7 @@
 -(void)	selectTile: (SNGTile*)inTile;
 -(void)	mapDidDeselectTile: (SNGTile*)inTile;
 
+-(void)	makeTiles: (NSUInteger)inNumberOfTiles withPrototypePList: (NSDictionary*)dict;
+-(BOOL)	save;
+
 @end

@@ -20,6 +20,7 @@
 @property (copy) NSString *					name;
 
 -(instancetype)		initWithPList: (NSDictionary*)inPList;
+-(NSDictionary*)	dictionaryRepresentation;
 
 -(IBAction) select;
 

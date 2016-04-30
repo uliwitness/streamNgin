@@ -2,10 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>SNGNorth</key>
-	<string>5.plist</string>
 	<key>SNGEast</key>
-	<string>4.plist</string>
+	<string>6_0.plist</string>
+	<key>SNGSouth</key>
+	<string>5_1.plist</string>
 	<key>SNGTiles</key>
 	<array>
 		<dict>
@@ -13,55 +13,75 @@
 			<string>free_tile.tiff</string>
 			<key>SNGIsObstacle</key>
 			<false/>
+			<key>SNGName</key>
+			<string></string>
 		</dict>
 		<dict>
 			<key>SNGImage</key>
 			<string>free_tile.tiff</string>
 			<key>SNGIsObstacle</key>
 			<false/>
+			<key>SNGName</key>
+			<string></string>
 		</dict>
 		<dict>
 			<key>SNGImage</key>
 			<string>free_tile.tiff</string>
 			<key>SNGIsObstacle</key>
 			<false/>
+			<key>SNGName</key>
+			<string></string>
 		</dict>
 		<dict>
 			<key>SNGImage</key>
 			<string>free_tile.tiff</string>
 			<key>SNGIsObstacle</key>
 			<false/>
-		</dict>
-		<dict>
-			<key>SNGImage</key>
-			<string>block_tile.tiff</string>
-			<key>SNGIsObstacle</key>
-			<true/>
+			<key>SNGName</key>
+			<string></string>
 		</dict>
 		<dict>
 			<key>SNGImage</key>
 			<string>free_tile.tiff</string>
 			<key>SNGIsObstacle</key>
 			<false/>
+			<key>SNGName</key>
+			<string></string>
 		</dict>
 		<dict>
 			<key>SNGImage</key>
 			<string>free_tile.tiff</string>
 			<key>SNGIsObstacle</key>
 			<false/>
+			<key>SNGName</key>
+			<string></string>
 		</dict>
 		<dict>
 			<key>SNGImage</key>
 			<string>free_tile.tiff</string>
 			<key>SNGIsObstacle</key>
 			<false/>
+			<key>SNGName</key>
+			<string></string>
 		</dict>
 		<dict>
 			<key>SNGImage</key>
 			<string>free_tile.tiff</string>
 			<key>SNGIsObstacle</key>
 			<false/>
+			<key>SNGName</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>SNGImage</key>
+			<string>free_tile.tiff</string>
+			<key>SNGIsObstacle</key>
+			<false/>
+			<key>SNGName</key>
+			<string></string>
 		</dict>
 	</array>
+	<key>SNGWest</key>
+	<string>4_0.plist</string>
 </dict>
 </plist>

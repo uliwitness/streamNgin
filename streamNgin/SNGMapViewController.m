@@ -29,7 +29,7 @@
 	[super viewDidLoad];
 	
 	self.map = [SNGMap new];
-	SNGChunk*	chunk = [self.map chunkObjectForPath: [[NSBundle mainBundle] pathForResource: @"1" ofType: @"plist"]];
+	SNGChunk*	chunk = [self.map chunkObjectForPath: [[NSBundle mainBundle] pathForResource: @"5_5" ofType: @"plist"]];
 	rowLength = sqrt(chunk.tiles.count);
 	
 	self.currentChunk = chunk;

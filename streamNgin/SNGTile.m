@@ -9,6 +9,14 @@
 #import "SNGTile.h"
 #import "SNGChunk.h"
 
+
+@interface SNGTile ()
+
+@property (copy) NSString*	imageName;
+
+@end
+
+
 @implementation SNGTile
 
 -(instancetype)	initWithPList: (NSDictionary*)inPList
@@ -16,11 +24,12 @@
 	self = [super init];
 	if( self )
 	{
-		self.image = [UIImage imageNamed: inPList[@"SNGImage"]];
+		self.imageName = inPList[@"SNGImage"];
+		self.image = [UIImage imageNamed: self.imageName];
 		self.obstacle = [inPList[@"SNGIsObstacle"] boolValue];
 		self.name = inPList[@"SNGName"];
 		if( !self.name )
-			self.name = inPList[@"SNGImage"];
+			self.name = self.imageName;
 	}
 	return self;
 }
@@ -28,6 +37,13 @@
 -(IBAction) select
 {
 	[self.owner selectTile: self];
+}
+
+
+-(NSDictionary*)	dictionaryRepresentation
+{
+	return @{ @"SNGImage": self.imageName, @"SNGIsObstacle": @(self.isObstacle),
+			  @"SNGName": self.name };
 }
 
 

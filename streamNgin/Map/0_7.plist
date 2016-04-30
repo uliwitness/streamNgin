@@ -2,12 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>SNGNorth</key>
-	<string>1.plist</string>
 	<key>SNGEast</key>
-	<string>7.plist</string>
-	<key>SNGWest</key>
-	<string>8.plist</string>
+	<string>1_7.plist</string>
+	<key>SNGNorth</key>
+	<string>0_6.plist</string>
+	<key>SNGSouth</key>
+	<string>0_8.plist</string>
 	<key>SNGTiles</key>
 	<array>
 		<dict>
@@ -15,54 +15,72 @@
 			<string>free_tile.tiff</string>
 			<key>SNGIsObstacle</key>
 			<false/>
+			<key>SNGName</key>
+			<string></string>
 		</dict>
 		<dict>
 			<key>SNGImage</key>
 			<string>free_tile.tiff</string>
 			<key>SNGIsObstacle</key>
 			<false/>
+			<key>SNGName</key>
+			<string></string>
 		</dict>
 		<dict>
 			<key>SNGImage</key>
 			<string>free_tile.tiff</string>
 			<key>SNGIsObstacle</key>
 			<false/>
+			<key>SNGName</key>
+			<string></string>
 		</dict>
 		<dict>
 			<key>SNGImage</key>
 			<string>free_tile.tiff</string>
 			<key>SNGIsObstacle</key>
 			<false/>
-		</dict>
-		<dict>
-			<key>SNGImage</key>
-			<string>block_tile.tiff</string>
-			<key>SNGIsObstacle</key>
-			<true/>
+			<key>SNGName</key>
+			<string></string>
 		</dict>
 		<dict>
 			<key>SNGImage</key>
 			<string>free_tile.tiff</string>
 			<key>SNGIsObstacle</key>
 			<false/>
+			<key>SNGName</key>
+			<string></string>
 		</dict>
 		<dict>
 			<key>SNGImage</key>
 			<string>free_tile.tiff</string>
 			<key>SNGIsObstacle</key>
 			<false/>
+			<key>SNGName</key>
+			<string></string>
 		</dict>
 		<dict>
 			<key>SNGImage</key>
 			<string>free_tile.tiff</string>
 			<key>SNGIsObstacle</key>
 			<false/>
+			<key>SNGName</key>
+			<string></string>
 		</dict>
 		<dict>
 			<key>SNGImage</key>
 			<string>free_tile.tiff</string>
 			<key>SNGIsObstacle</key>
 			<false/>
+			<key>SNGName</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>SNGImage</key>
+			<string>free_tile.tiff</string>
+			<key>SNGIsObstacle</key>
+			<false/>
+			<key>SNGName</key>
+			<string></string>
 		</dict>
 	</array>
 </dict>

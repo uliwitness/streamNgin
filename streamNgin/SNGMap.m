@@ -33,6 +33,38 @@
 }
 
 
+-(instancetype) initWithNumberOfColumns: (NSUInteger)cols rows: (NSUInteger)rows mapFolderPath: (NSString*)inBasePath tilePrototypePList: (NSDictionary*)tilePrototype
+{
+	self = [self init];
+	if( self )
+	{
+		for( NSUInteger y = 0; y < rows; y++ )
+		{
+			for( NSUInteger x = 0; x < cols; x++ )
+			{
+				NSString	*	chunkPath = [inBasePath stringByAppendingPathComponent: [NSString stringWithFormat: @"%lu_%lu.plist", (unsigned long)x, (unsigned long)y]];
+				SNGChunk	*	chunk = [self chunkObjectForPath: chunkPath];
+				[chunk makeTiles: 9 withPrototypePList: tilePrototype];
+				
+				if( x > 0 )
+				{
+					chunkPath = [inBasePath stringByAppendingPathComponent: [NSString stringWithFormat: @"%lu_%lu.plist", (unsigned long)x -1, (unsigned long)y]];
+					chunk.westChunk = [self chunkObjectForPath: chunkPath];
+					chunk.westChunk.eastChunk = chunk;
+				}
+				if( y > 0 )
+				{
+					chunkPath = [inBasePath stringByAppendingPathComponent: [NSString stringWithFormat: @"%lu_%lu.plist", (unsigned long)x, (unsigned long)y -1]];
+					chunk.northChunk = [self chunkObjectForPath: chunkPath];
+					chunk.northChunk.southChunk = chunk;
+				}
+			}
+		}
+	}
+	return self;
+}
+
+
 -(SNGChunk*)	chunkObjectForPath: (NSString*)inPath
 {
 	SNGChunk*	theChunk = self.actualChunks[inPath];
@@ -63,6 +95,17 @@
 	self.selectedTile = inTile;
 	
 	NSLog( @"Selected tile %@ in %@", inTile, chunk );
+}
+
+
+-(BOOL)	save
+{
+	BOOL	success = YES;
+	for( SNGChunk* currChunk in self.actualChunks.allValues )
+	{
+		success &= [currChunk save];
+	}
+	return success;
 }
 
 @end

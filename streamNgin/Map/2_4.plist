@@ -3,11 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>SNGEast</key>
-	<string>5.plist</string>
-	<key>SNGSouth</key>
-	<string>8.plist</string>
+	<string>3_4.plist</string>
 	<key>SNGNorth</key>
-	<string>9.plist</string>
+	<string>2_3.plist</string>
+	<key>SNGSouth</key>
+	<string>2_5.plist</string>
 	<key>SNGTiles</key>
 	<array>
 		<dict>
@@ -15,55 +15,75 @@
 			<string>free_tile.tiff</string>
 			<key>SNGIsObstacle</key>
 			<false/>
+			<key>SNGName</key>
+			<string></string>
 		</dict>
 		<dict>
 			<key>SNGImage</key>
 			<string>free_tile.tiff</string>
 			<key>SNGIsObstacle</key>
 			<false/>
+			<key>SNGName</key>
+			<string></string>
 		</dict>
 		<dict>
 			<key>SNGImage</key>
 			<string>free_tile.tiff</string>
 			<key>SNGIsObstacle</key>
 			<false/>
+			<key>SNGName</key>
+			<string></string>
 		</dict>
 		<dict>
 			<key>SNGImage</key>
 			<string>free_tile.tiff</string>
 			<key>SNGIsObstacle</key>
 			<false/>
-		</dict>
-		<dict>
-			<key>SNGImage</key>
-			<string>block_tile.tiff</string>
-			<key>SNGIsObstacle</key>
-			<true/>
+			<key>SNGName</key>
+			<string></string>
 		</dict>
 		<dict>
 			<key>SNGImage</key>
 			<string>free_tile.tiff</string>
 			<key>SNGIsObstacle</key>
 			<false/>
+			<key>SNGName</key>
+			<string></string>
 		</dict>
 		<dict>
 			<key>SNGImage</key>
 			<string>free_tile.tiff</string>
 			<key>SNGIsObstacle</key>
 			<false/>
+			<key>SNGName</key>
+			<string></string>
 		</dict>
 		<dict>
 			<key>SNGImage</key>
 			<string>free_tile.tiff</string>
 			<key>SNGIsObstacle</key>
 			<false/>
+			<key>SNGName</key>
+			<string></string>
 		</dict>
 		<dict>
 			<key>SNGImage</key>
 			<string>free_tile.tiff</string>
 			<key>SNGIsObstacle</key>
 			<false/>
+			<key>SNGName</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>SNGImage</key>
+			<string>free_tile.tiff</string>
+			<key>SNGIsObstacle</key>
+			<false/>
+			<key>SNGName</key>
+			<string></string>
 		</dict>
 	</array>
+	<key>SNGWest</key>
+	<string>1_4.plist</string>
 </dict>
 </plist>

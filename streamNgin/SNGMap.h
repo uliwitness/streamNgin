@@ -17,6 +17,10 @@
 
 @property (strong,readonly) NSArray*	chunks;
 
+-(instancetype) init;	// Default constructor for an empty map that you fill by adding the first chunk to it, relative to which all others will be loaded.
+-(instancetype) initWithNumberOfColumns: (NSUInteger)cols rows: (NSUInteger)rows mapFolderPath: (NSString*)inBasePath tilePrototypePList: (NSDictionary*)tilePrototype;	// For creating a new, empty map.
+-(BOOL)	save;
+
 /*!
 	Since chunks point forth and back between each other,
 	we keep a central list of chunks in the map. This serves

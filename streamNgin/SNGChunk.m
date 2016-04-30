@@ -32,6 +32,11 @@
 	if( !self.isLoaded )
 	{
 		NSDictionary	*	plist = [NSDictionary dictionaryWithContentsOfFile: self.filePath];
+		if( plist == nil )	// If the file doesn't exist, don't empty out this object or makeTiles:withPrototypePList: will never work.
+		{
+			self.loaded = YES;
+			return;
+		}
 		NSArray			*	tilesPListArray = plist[@"SNGTiles"];
 		NSMutableArray	*	array = [NSMutableArray array];
 		for( NSDictionary* currTilePList in tilesPListArray )
@@ -155,9 +160,55 @@
 }
 
 
+-(void)	makeTiles: (NSUInteger)inNumberOfTiles withPrototypePList: (NSDictionary*)dict;
+{
+	[self loadIfNeeded];
+	
+	NSMutableArray	*	array = [NSMutableArray array];
+	for( NSUInteger x = 0; x < inNumberOfTiles; x++ )
+	{
+		SNGTile	*	theTile = [[SNGTile alloc] initWithPList: dict];
+		theTile.owner = self;
+		[array addObject: theTile];
+	}
+	self.tiles = array;
+}
+
+
+-(BOOL)	save
+{
+	NSMutableDictionary	*	chunkFileDict = [NSMutableDictionary dictionary];
+	
+	if( self.northChunk )
+	{
+		[chunkFileDict setObject: self.northChunk.filePath.lastPathComponent forKey: @"SNGNorth"];
+	}
+	if( self.eastChunk )
+	{
+		[chunkFileDict setObject: self.eastChunk.filePath.lastPathComponent forKey: @"SNGEast"];
+	}
+	if( self.southChunk )
+	{
+		[chunkFileDict setObject: self.southChunk.filePath.lastPathComponent forKey: @"SNGSouth"];
+	}
+	if( self.westChunk )
+	{
+		[chunkFileDict setObject: self.westChunk.filePath.lastPathComponent forKey: @"SNGWest"];
+	}
+	NSMutableArray	*	array = [NSMutableArray array];
+	for( SNGTile* currTile in self.tiles )
+	{
+		[array addObject: [currTile dictionaryRepresentation]];
+	}
+	[chunkFileDict setObject: array forKey: @"SNGTiles"];
+	
+	return [chunkFileDict writeToFile: self.filePath atomically: YES];
+}
+
+
 -(NSString*)	description
 {
-	return [NSString stringWithFormat: @"<%@: %p \"%@\">", self.class, self, self.filePath.lastPathComponent];
+	return [NSString stringWithFormat: @"<%@: %p \"%@\" %lu>", self.class, self, self.filePath.lastPathComponent, (unsigned long)self.tiles.count];
 }
 
 @end

@@ -8,6 +8,8 @@
 
 #import "SNGAppDelegate.h"
 
+#import "SNGMap.h"
+
 @interface SNGAppDelegate ()
 
 @end
@@ -17,7 +19,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	
-	
+	#if 0	// Switch this to 1 to create an empty map in /tmp to base your own maps on.
+	SNGMap	*	aMap = [[SNGMap alloc] initWithNumberOfColumns: 10 rows: 10 mapFolderPath: @"/tmp/" tilePrototypePList: @{ @"SNGImage": @"free_tile.tiff", @"SNGName": @"", @"SNGIsObstacle": @NO }];
+	[aMap save];
+	#endif
 	
 	return YES;
 }
