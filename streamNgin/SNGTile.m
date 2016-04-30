@@ -7,6 +7,7 @@
 //
 
 #import "SNGTile.h"
+#import "SNGChunk.h"
 
 @implementation SNGTile
 
@@ -17,8 +18,22 @@
 	{
 		self.image = [UIImage imageNamed: inPList[@"SNGImage"]];
 		self.obstacle = [inPList[@"SNGIsObstacle"] boolValue];
+		self.name = inPList[@"SNGName"];
+		if( !self.name )
+			self.name = inPList[@"SNGImage"];
 	}
 	return self;
+}
+
+-(IBAction) select
+{
+	[self.owner selectTile: self];
+}
+
+
+-(NSString*)	description
+{
+	return [NSString stringWithFormat: @"<%@: %p \"%@\">", self.class, self, self.name];
 }
 
 @end

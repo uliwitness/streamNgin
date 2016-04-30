@@ -31,6 +31,11 @@
 #define TILE_OVERLAP_V	84
 
 
+@class SNGTile;
+
+
 @interface SNGTileView : UIButton
+
+@property (weak) SNGTile*	owner;
 
 @end

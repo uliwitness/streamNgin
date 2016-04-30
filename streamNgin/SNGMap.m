@@ -8,11 +8,14 @@
 
 #import "SNGMap.h"
 #import "SNGChunk.h"
+#import "SNGTile.h"
 
 
 @interface SNGMap ()
 
 @property (strong) NSMutableDictionary*	actualChunks;
+@property (weak) SNGTile*				selectedTile;
+@property (weak) SNGChunk*				selectedChunk;
 
 @end
 
@@ -48,6 +51,18 @@
 -(NSArray*)	chunks
 {
 	return self.actualChunks.allValues;
+}
+
+-(void)	selectTile: (SNGTile*)inTile
+{
+	SNGChunk	*	chunk = inTile.owner;
+	
+	if( self.selectedChunk )
+		[self.selectedChunk mapDidDeselectTile: self.selectedTile];
+	self.selectedChunk = chunk;
+	self.selectedTile = inTile;
+	
+	NSLog( @"Selected tile %@ in %@", inTile, chunk );
 }
 
 @end

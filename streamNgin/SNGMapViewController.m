@@ -105,6 +105,8 @@
 	{
 		SNGTileView*	tileView = [[SNGTileView alloc] initWithFrame: currBox];
 		[tileView setImage: currTile.image forState: UIControlStateNormal];
+		tileView.owner = currTile;
+		[tileView addTarget: currTile action: @selector(select) forControlEvents: UIControlEventTouchDown];
 		[self.view addSubview: tileView];
 		
 		if( (x % rowLength) == 0 )	// End of row? Wrap!

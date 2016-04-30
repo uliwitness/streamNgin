@@ -10,6 +10,7 @@
 
 
 @class SNGChunk;
+@class SNGTile;
 
 
 @interface SNGMap : NSObject
@@ -26,5 +27,7 @@
 	return that same object again.
 */
 -(SNGChunk*)	chunkObjectForPath: (NSString*)inPath;
+
+-(void)	selectTile: (SNGTile*)inTile;
 
 @end

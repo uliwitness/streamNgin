@@ -37,6 +37,7 @@
 		for( NSDictionary* currTilePList in tilesPListArray )
 		{
 			SNGTile	*	theTile = [[SNGTile alloc] initWithPList: currTilePList];
+			theTile.owner = self;
 			[array addObject: theTile];
 		}
 		self.tiles = array;
@@ -139,6 +140,24 @@
 -(void)setWestChunk:(SNGChunk *)westChunk
 {
 	_westChunk = westChunk;
+}
+
+
+-(void)	selectTile: (SNGTile*)inTile
+{
+	[self.owner selectTile: inTile];
+}
+
+
+-(void)	mapDidDeselectTile: (SNGTile*)inTile;
+{
+	
+}
+
+
+-(NSString*)	description
+{
+	return [NSString stringWithFormat: @"<%@: %p \"%@\">", self.class, self, self.filePath.lastPathComponent];
 }
 
 @end

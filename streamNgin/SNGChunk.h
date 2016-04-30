@@ -26,4 +26,7 @@
 
 @property (strong,readonly) NSArray<SNGTile *>*	tiles;
 
+-(void)	selectTile: (SNGTile*)inTile;
+-(void)	mapDidDeselectTile: (SNGTile*)inTile;
+
 @end
