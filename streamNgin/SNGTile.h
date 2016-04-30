@@ -14,14 +14,17 @@
 
 @interface SNGTile : NSObject
 
-@property (strong) UIImage *				image;
-@property (assign,getter=isObstacle) BOOL	obstacle;
-@property (weak) SNGChunk *					owner;
-@property (copy) NSString *					name;
+@property (readonly) UIImage *					image;
+@property (assign,getter=isObstacle) BOOL		obstacle;
+@property (weak) SNGChunk *						owner;
+@property (copy) NSString *						name;
+@property (readonly,getter=isSelected) BOOL 	selected;
+@property (strong) id							viewObject;
 
 -(instancetype)		initWithPList: (NSDictionary*)inPList;
--(NSDictionary*)	dictionaryRepresentation;
+-(NSDictionary*)	PListRepresentation;
 
 -(IBAction) select;
+-(void)		mapDidDeselect;
 
 @end

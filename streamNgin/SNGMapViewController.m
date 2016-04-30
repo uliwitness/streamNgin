@@ -12,7 +12,7 @@
 #import "SNGTileView.h"
 
 
-@interface SNGMapViewController ()
+@interface SNGMapViewController () <SNGMapDelegate>
 {
 	NSUInteger		rowLength;
 }
@@ -29,10 +29,12 @@
 	[super viewDidLoad];
 	
 	self.map = [SNGMap new];
+	self.map.delegate = self;
 	SNGChunk*	chunk = [self.map chunkObjectForPath: [[NSBundle mainBundle] pathForResource: @"5_5" ofType: @"plist"]];
 	rowLength = sqrt(chunk.tiles.count);
 	
 	self.currentChunk = chunk;
+	[self.currentChunk.tiles[4] select];
 	[self reloadMap];
 }
 
@@ -108,6 +110,7 @@
 		tileView.owner = currTile;
 		[tileView addTarget: currTile action: @selector(select) forControlEvents: UIControlEventTouchDown];
 		[self.view addSubview: tileView];
+		currTile.viewObject = tileView;
 		
 		if( (x % rowLength) == 0 )	// End of row? Wrap!
 		{
@@ -162,6 +165,20 @@
 	}
 	else
 		;//NSLog(@"\tSouth offscreen.");
+}
+
+
+-(void)	map:(SNGMap *)sender didDeselectTile:(SNGTile *)inTile
+{
+	[(SNGTileView*)inTile.viewObject setImage: inTile.image forState:UIControlStateNormal];
+}
+
+
+-(void)	map:(SNGMap *)sender didSelectTile:(SNGTile *)inTile
+{
+	SNGChunk	*	chunk = inTile.owner;
+	[(SNGTileView*)inTile.viewObject setImage: inTile.image forState:UIControlStateNormal];
+	NSLog( @"Selected tile %@ in %@", inTile, chunk );
 }
 
 @end

@@ -36,9 +36,9 @@
 		</dict>
 		<dict>
 			<key>SNGImage</key>
-			<string>free_tile.tiff</string>
+			<string>block_tile.tiff</string>
 			<key>SNGIsObstacle</key>
-			<false/>
+			<true/>
 			<key>SNGName</key>
 			<string></string>
 		</dict>

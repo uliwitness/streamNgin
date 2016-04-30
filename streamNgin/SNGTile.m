@@ -12,7 +12,10 @@
 
 @interface SNGTile ()
 
-@property (copy) NSString*	imageName;
+@property (copy) NSString*						imageName;
+@property (readwrite,getter=isSelected) BOOL 	selected;
+@property (strong) UIImage *					unselectedImage;
+@property (strong) UIImage *					selectedImage;
 
 @end
 
@@ -25,7 +28,8 @@
 	if( self )
 	{
 		self.imageName = inPList[@"SNGImage"];
-		self.image = [UIImage imageNamed: self.imageName];
+		self.unselectedImage = [UIImage imageNamed: self.imageName];
+		self.selectedImage = [UIImage imageNamed: [self.imageName stringByReplacingOccurrencesOfString: @".tiff" withString: @"_selected.tiff"]];
 		self.obstacle = [inPList[@"SNGIsObstacle"] boolValue];
 		self.name = inPList[@"SNGName"];
 		if( !self.name )
@@ -34,13 +38,27 @@
 	return self;
 }
 
+
+-(UIImage *)image
+{
+	return (self.selected && self.selectedImage != nil) ? self.selectedImage : self.unselectedImage;
+}
+
+
 -(IBAction) select
 {
+	self.selected = YES;
 	[self.owner selectTile: self];
 }
 
 
--(NSDictionary*)	dictionaryRepresentation
+-(void)		mapDidDeselect
+{
+	self.selected = NO;
+}
+
+
+-(NSDictionary*)	PListRepresentation
 {
 	return @{ @"SNGImage": self.imageName, @"SNGIsObstacle": @(self.isObstacle),
 			  @"SNGName": self.name };

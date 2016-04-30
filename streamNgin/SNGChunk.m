@@ -156,7 +156,7 @@
 
 -(void)	mapDidDeselectTile: (SNGTile*)inTile;
 {
-	
+	[inTile mapDidDeselect];
 }
 
 
@@ -198,7 +198,7 @@
 	NSMutableArray	*	array = [NSMutableArray array];
 	for( SNGTile* currTile in self.tiles )
 	{
-		[array addObject: [currTile dictionaryRepresentation]];
+		[array addObject: [currTile PListRepresentation]];
 	}
 	[chunkFileDict setObject: array forKey: @"SNGTiles"];
 	

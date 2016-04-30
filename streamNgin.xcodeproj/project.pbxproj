@@ -119,6 +119,8 @@
 		55BCE9861CD5222F00E04847 /* 9_7.plist in Resources */ = {isa = PBXBuildFile; fileRef = 55BCE9221CD5222F00E04847 /* 9_7.plist */; };
 		55BCE9871CD5222F00E04847 /* 9_8.plist in Resources */ = {isa = PBXBuildFile; fileRef = 55BCE9231CD5222F00E04847 /* 9_8.plist */; };
 		55BCE9881CD5222F00E04847 /* 9_9.plist in Resources */ = {isa = PBXBuildFile; fileRef = 55BCE9241CD5222F00E04847 /* 9_9.plist */; };
+		55DE7EF61CD52BD70094390B /* block_tile_selected.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 55DE7EF41CD52BD70094390B /* block_tile_selected.tiff */; };
+		55DE7EF71CD52BD70094390B /* free_tile_selected.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 55DE7EF51CD52BD70094390B /* free_tile_selected.tiff */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -242,6 +244,8 @@
 		55BCE9221CD5222F00E04847 /* 9_7.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = 9_7.plist; path = Map/9_7.plist; sourceTree = "<group>"; };
 		55BCE9231CD5222F00E04847 /* 9_8.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = 9_8.plist; path = Map/9_8.plist; sourceTree = "<group>"; };
 		55BCE9241CD5222F00E04847 /* 9_9.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = 9_9.plist; path = Map/9_9.plist; sourceTree = "<group>"; };
+		55DE7EF41CD52BD70094390B /* block_tile_selected.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = block_tile_selected.tiff; path = Images/block_tile_selected.tiff; sourceTree = "<group>"; };
+		55DE7EF51CD52BD70094390B /* free_tile_selected.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = free_tile_selected.tiff; path = Images/free_tile_selected.tiff; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -310,6 +314,8 @@
 			children = (
 				55BCE8A31CD4D72E00E04847 /* block_tile.tiff */,
 				55BCE8A41CD4D72E00E04847 /* free_tile.tiff */,
+				55DE7EF41CD52BD70094390B /* block_tile_selected.tiff */,
+				55DE7EF51CD52BD70094390B /* free_tile_selected.tiff */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -481,6 +487,7 @@
 			files = (
 				55BCE9411CD5222F00E04847 /* 2_8.plist in Resources */,
 				55BCE96D1CD5222F00E04847 /* 7_2.plist in Resources */,
+				55DE7EF71CD52BD70094390B /* free_tile_selected.tiff in Resources */,
 				55BCE97A1CD5222F00E04847 /* 8_5.plist in Resources */,
 				55BCE9871CD5222F00E04847 /* 9_8.plist in Resources */,
 				55BCE9821CD5222F00E04847 /* 9_3.plist in Resources */,
@@ -550,6 +557,7 @@
 				55BCE8A51CD4D72E00E04847 /* block_tile.tiff in Resources */,
 				55BCE93C1CD5222F00E04847 /* 2_3.plist in Resources */,
 				55BCE97B1CD5222F00E04847 /* 8_6.plist in Resources */,
+				55DE7EF61CD52BD70094390B /* block_tile_selected.tiff in Resources */,
 				55BCE95A1CD5222F00E04847 /* 5_3.plist in Resources */,
 				55BCE9661CD5222F00E04847 /* 6_5.plist in Resources */,
 				55BCE9551CD5222F00E04847 /* 4_8.plist in Resources */,
@@ -757,6 +765,7 @@
 				55BCE89C1CD4C93800E04847 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
