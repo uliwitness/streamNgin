@@ -14,10 +14,10 @@
 @interface SNGChunk ()
 {
 	NSArray<SNGTile*>*	_tiles;
-	SNGChunk*			_northChunk;
-	SNGChunk*			_eastChunk;
-	SNGChunk*			_southChunk;
-	SNGChunk*			_westChunk;
+	__weak SNGChunk*	_northChunk;
+	__weak SNGChunk*	_eastChunk;
+	__weak SNGChunk*	_southChunk;
+	__weak SNGChunk*	_westChunk;
 }
 
 @property (strong,readwrite) NSArray<SNGTile *>*	tiles;

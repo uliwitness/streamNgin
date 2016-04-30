@@ -19,10 +19,10 @@
 @property (assign) NSUInteger			generation;
 @property (weak) SNGMap*				owner;
 
-@property (strong) SNGChunk*			northChunk;
-@property (strong) SNGChunk*			eastChunk;
-@property (strong) SNGChunk*			southChunk;
-@property (strong) SNGChunk*			westChunk;
+@property (weak) SNGChunk*				northChunk;
+@property (weak) SNGChunk*				eastChunk;
+@property (weak) SNGChunk*				southChunk;
+@property (weak) SNGChunk*				westChunk;
 
 @property (strong,readonly) NSArray<SNGTile *>*	tiles;
 
