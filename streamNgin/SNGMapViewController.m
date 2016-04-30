@@ -11,7 +11,9 @@
 #import "SNGTile.h"
 
 
-#define TILE_SIZE		64
+#define TILE_SIZE		128
+#define TILE_OVERLAP_H	44
+#define TILE_OVERLAP_V	84
 
 
 @interface SNGMapViewController ()
@@ -47,8 +49,8 @@
 	}
 	
 	CGRect		box = { { 0,0 }, { TILE_SIZE, TILE_SIZE } };
-	box.origin.x = trunc((self.view.bounds.size.width -(box.size.width * rowLength)) / 2);
-	box.origin.y = trunc((self.view.bounds.size.height -(box.size.height * rowLength)) / 2);
+	box.origin.x = trunc((self.view.bounds.size.width -((TILE_SIZE -TILE_OVERLAP_H) * rowLength)) / 2);
+	box.origin.y = trunc((self.view.bounds.size.height -((TILE_SIZE -TILE_OVERLAP_V) * rowLength)) / 2);
 	self.currentChunk.generation ++;
 	[self createViewsForChunkObject: self.currentChunk withTopLeftRect: box];
 }
@@ -67,10 +69,10 @@
 		if( (x % rowLength) == 0 )	// End of row? Wrap!
 		{
 			currBox.origin.x = box.origin.x;
-			currBox.origin.y += box.size.height;
+			currBox.origin.y += TILE_SIZE -TILE_OVERLAP_V;
 		}
 		else
-			currBox.origin.x += box.size.width;
+			currBox.origin.x += TILE_SIZE -TILE_OVERLAP_H;
 		x++;
 	}
 	NSLog(@"===== %@ =====", chunk.filePath.lastPathComponent);
@@ -82,7 +84,7 @@
 		{
 			NSLog(@"\tWest <<");
 			CGRect	nextTopLeftRect = box;
-			nextTopLeftRect.origin.x -= box.size.width * rowLength;
+			nextTopLeftRect.origin.x -= (TILE_SIZE -TILE_OVERLAP_H) * rowLength;
 			nextChunk.generation = chunk.generation;
 			NSLog(@"\t\tGeneration: %lu", (unsigned long)chunk.generation);
 			[self createViewsForChunkObject: nextChunk withTopLeftRect: nextTopLeftRect];
@@ -103,7 +105,7 @@
 		{
 			NSLog(@"\tEast <<");
 			CGRect	nextTopLeftRect = box;
-			nextTopLeftRect.origin.x += box.size.width * rowLength;
+			nextTopLeftRect.origin.x += (TILE_SIZE -TILE_OVERLAP_H) * rowLength;
 			nextChunk.generation = chunk.generation;
 			NSLog(@"\t\tGeneration: %lu", (unsigned long)chunk.generation);
 			[self createViewsForChunkObject: nextChunk withTopLeftRect: nextTopLeftRect];
@@ -124,7 +126,7 @@
 		{
 			NSLog(@"\tNorth <<");
 			CGRect	nextTopLeftRect = box;
-			nextTopLeftRect.origin.y -= box.size.height * rowLength;
+			nextTopLeftRect.origin.y -= (TILE_SIZE -TILE_OVERLAP_V) * rowLength;
 			nextChunk.generation = chunk.generation;
 			NSLog(@"\t\tGeneration: %lu", (unsigned long)chunk.generation);
 			[self createViewsForChunkObject: nextChunk withTopLeftRect: nextTopLeftRect];
@@ -145,7 +147,7 @@
 		{
 			NSLog(@"\tSouth <<");
 			CGRect	nextTopLeftRect = box;
-			nextTopLeftRect.origin.y += box.size.height * rowLength;
+			nextTopLeftRect.origin.y += (TILE_SIZE -TILE_OVERLAP_V) * rowLength;
 			nextChunk.generation = chunk.generation;
 			NSLog(@"\t\tGeneration: %lu", (unsigned long)chunk.generation);
 			[self createViewsForChunkObject: nextChunk withTopLeftRect: nextTopLeftRect];
