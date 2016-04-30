@@ -1,0 +1,388 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		55BCE8881CD4C93800E04847 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 55BCE8871CD4C93800E04847 /* main.m */; };
+		55BCE88B1CD4C93800E04847 /* SNGAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 55BCE88A1CD4C93800E04847 /* SNGAppDelegate.m */; };
+		55BCE88E1CD4C93800E04847 /* SNGMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55BCE88D1CD4C93800E04847 /* SNGMapViewController.m */; };
+		55BCE8911CD4C93800E04847 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55BCE88F1CD4C93800E04847 /* Main.storyboard */; };
+		55BCE8931CD4C93800E04847 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55BCE8921CD4C93800E04847 /* Assets.xcassets */; };
+		55BCE8961CD4C93800E04847 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55BCE8941CD4C93800E04847 /* LaunchScreen.storyboard */; };
+		55BCE89F1CD4C96300E04847 /* SNGChunk.m in Sources */ = {isa = PBXBuildFile; fileRef = 55BCE89E1CD4C96300E04847 /* SNGChunk.m */; };
+		55BCE8A21CD4C9A800E04847 /* SNGTile.m in Sources */ = {isa = PBXBuildFile; fileRef = 55BCE8A11CD4C9A800E04847 /* SNGTile.m */; };
+		55BCE8A51CD4D72E00E04847 /* block_tile.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 55BCE8A31CD4D72E00E04847 /* block_tile.tiff */; };
+		55BCE8A61CD4D72E00E04847 /* free_tile.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 55BCE8A41CD4D72E00E04847 /* free_tile.tiff */; };
+		55BCE8AA1CD4D94D00E04847 /* SNGMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 55BCE8A91CD4D94D00E04847 /* SNGMap.m */; };
+		55BCE8AC1CD4DCB300E04847 /* 1.plist in Resources */ = {isa = PBXBuildFile; fileRef = 55BCE8AB1CD4DCB300E04847 /* 1.plist */; };
+		55BCE8B21CD4E9BF00E04847 /* 2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 55BCE8AE1CD4E9BF00E04847 /* 2.plist */; };
+		55BCE8B31CD4E9BF00E04847 /* 3.plist in Resources */ = {isa = PBXBuildFile; fileRef = 55BCE8AF1CD4E9BF00E04847 /* 3.plist */; };
+		55BCE8B41CD4E9BF00E04847 /* 4.plist in Resources */ = {isa = PBXBuildFile; fileRef = 55BCE8B01CD4E9BF00E04847 /* 4.plist */; };
+		55BCE8B51CD4E9BF00E04847 /* 5.plist in Resources */ = {isa = PBXBuildFile; fileRef = 55BCE8B11CD4E9BF00E04847 /* 5.plist */; };
+		55BCE8BA1CD4EBF100E04847 /* 6.plist in Resources */ = {isa = PBXBuildFile; fileRef = 55BCE8B61CD4EBF100E04847 /* 6.plist */; };
+		55BCE8BB1CD4EBF100E04847 /* 7.plist in Resources */ = {isa = PBXBuildFile; fileRef = 55BCE8B71CD4EBF100E04847 /* 7.plist */; };
+		55BCE8BC1CD4EBF100E04847 /* 8.plist in Resources */ = {isa = PBXBuildFile; fileRef = 55BCE8B81CD4EBF100E04847 /* 8.plist */; };
+		55BCE8BD1CD4EBF100E04847 /* 9.plist in Resources */ = {isa = PBXBuildFile; fileRef = 55BCE8B91CD4EBF100E04847 /* 9.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		55BCE8831CD4C93800E04847 /* streamNgin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = streamNgin.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		55BCE8871CD4C93800E04847 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		55BCE8891CD4C93800E04847 /* SNGAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SNGAppDelegate.h; sourceTree = "<group>"; };
+		55BCE88A1CD4C93800E04847 /* SNGAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SNGAppDelegate.m; sourceTree = "<group>"; };
+		55BCE88C1CD4C93800E04847 /* SNGMapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SNGMapViewController.h; sourceTree = "<group>"; };
+		55BCE88D1CD4C93800E04847 /* SNGMapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SNGMapViewController.m; sourceTree = "<group>"; };
+		55BCE8901CD4C93800E04847 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		55BCE8921CD4C93800E04847 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		55BCE8951CD4C93800E04847 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		55BCE8971CD4C93800E04847 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55BCE89D1CD4C96300E04847 /* SNGChunk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNGChunk.h; sourceTree = "<group>"; };
+		55BCE89E1CD4C96300E04847 /* SNGChunk.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNGChunk.m; sourceTree = "<group>"; };
+		55BCE8A01CD4C9A800E04847 /* SNGTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNGTile.h; sourceTree = "<group>"; };
+		55BCE8A11CD4C9A800E04847 /* SNGTile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNGTile.m; sourceTree = "<group>"; };
+		55BCE8A31CD4D72E00E04847 /* block_tile.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = block_tile.tiff; path = Images/block_tile.tiff; sourceTree = "<group>"; };
+		55BCE8A41CD4D72E00E04847 /* free_tile.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = free_tile.tiff; path = Images/free_tile.tiff; sourceTree = "<group>"; };
+		55BCE8A81CD4D94D00E04847 /* SNGMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNGMap.h; sourceTree = "<group>"; };
+		55BCE8A91CD4D94D00E04847 /* SNGMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNGMap.m; sourceTree = "<group>"; };
+		55BCE8AB1CD4DCB300E04847 /* 1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = 1.plist; path = Map/1.plist; sourceTree = "<group>"; };
+		55BCE8AE1CD4E9BF00E04847 /* 2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = 2.plist; path = Map/2.plist; sourceTree = "<group>"; };
+		55BCE8AF1CD4E9BF00E04847 /* 3.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = 3.plist; path = Map/3.plist; sourceTree = "<group>"; };
+		55BCE8B01CD4E9BF00E04847 /* 4.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = 4.plist; path = Map/4.plist; sourceTree = "<group>"; };
+		55BCE8B11CD4E9BF00E04847 /* 5.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = 5.plist; path = Map/5.plist; sourceTree = "<group>"; };
+		55BCE8B61CD4EBF100E04847 /* 6.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = 6.plist; path = Map/6.plist; sourceTree = "<group>"; };
+		55BCE8B71CD4EBF100E04847 /* 7.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = 7.plist; path = Map/7.plist; sourceTree = "<group>"; };
+		55BCE8B81CD4EBF100E04847 /* 8.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = 8.plist; path = Map/8.plist; sourceTree = "<group>"; };
+		55BCE8B91CD4EBF100E04847 /* 9.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = 9.plist; path = Map/9.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		55BCE8801CD4C93800E04847 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		55BCE87A1CD4C93800E04847 = {
+			isa = PBXGroup;
+			children = (
+				55BCE8851CD4C93800E04847 /* streamNgin */,
+				55BCE8841CD4C93800E04847 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		55BCE8841CD4C93800E04847 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				55BCE8831CD4C93800E04847 /* streamNgin.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		55BCE8851CD4C93800E04847 /* streamNgin */ = {
+			isa = PBXGroup;
+			children = (
+				55BCE8891CD4C93800E04847 /* SNGAppDelegate.h */,
+				55BCE88A1CD4C93800E04847 /* SNGAppDelegate.m */,
+				55BCE88C1CD4C93800E04847 /* SNGMapViewController.h */,
+				55BCE88D1CD4C93800E04847 /* SNGMapViewController.m */,
+				55BCE8A81CD4D94D00E04847 /* SNGMap.h */,
+				55BCE8A91CD4D94D00E04847 /* SNGMap.m */,
+				55BCE89D1CD4C96300E04847 /* SNGChunk.h */,
+				55BCE89E1CD4C96300E04847 /* SNGChunk.m */,
+				55BCE8A01CD4C9A800E04847 /* SNGTile.h */,
+				55BCE8A11CD4C9A800E04847 /* SNGTile.m */,
+				55BCE8AD1CD4DCBB00E04847 /* Map */,
+				55BCE88F1CD4C93800E04847 /* Main.storyboard */,
+				55BCE8921CD4C93800E04847 /* Assets.xcassets */,
+				55BCE8941CD4C93800E04847 /* LaunchScreen.storyboard */,
+				55BCE8971CD4C93800E04847 /* Info.plist */,
+				55BCE8A71CD4D73B00E04847 /* Images */,
+				55BCE8861CD4C93800E04847 /* Supporting Files */,
+			);
+			path = streamNgin;
+			sourceTree = "<group>";
+		};
+		55BCE8861CD4C93800E04847 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				55BCE8871CD4C93800E04847 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		55BCE8A71CD4D73B00E04847 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				55BCE8A31CD4D72E00E04847 /* block_tile.tiff */,
+				55BCE8A41CD4D72E00E04847 /* free_tile.tiff */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		55BCE8AD1CD4DCBB00E04847 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				55BCE8AB1CD4DCB300E04847 /* 1.plist */,
+				55BCE8AE1CD4E9BF00E04847 /* 2.plist */,
+				55BCE8AF1CD4E9BF00E04847 /* 3.plist */,
+				55BCE8B01CD4E9BF00E04847 /* 4.plist */,
+				55BCE8B11CD4E9BF00E04847 /* 5.plist */,
+				55BCE8B61CD4EBF100E04847 /* 6.plist */,
+				55BCE8B71CD4EBF100E04847 /* 7.plist */,
+				55BCE8B81CD4EBF100E04847 /* 8.plist */,
+				55BCE8B91CD4EBF100E04847 /* 9.plist */,
+			);
+			name = Map;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		55BCE8821CD4C93800E04847 /* streamNgin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55BCE89A1CD4C93800E04847 /* Build configuration list for PBXNativeTarget "streamNgin" */;
+			buildPhases = (
+				55BCE87F1CD4C93800E04847 /* Sources */,
+				55BCE8801CD4C93800E04847 /* Frameworks */,
+				55BCE8811CD4C93800E04847 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = streamNgin;
+			productName = streamNgin;
+			productReference = 55BCE8831CD4C93800E04847 /* streamNgin.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		55BCE87B1CD4C93800E04847 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Uli Kusterer";
+				TargetAttributes = {
+					55BCE8821CD4C93800E04847 = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = RCKXACKVZS;
+					};
+				};
+			};
+			buildConfigurationList = 55BCE87E1CD4C93800E04847 /* Build configuration list for PBXProject "streamNgin" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 55BCE87A1CD4C93800E04847;
+			productRefGroup = 55BCE8841CD4C93800E04847 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				55BCE8821CD4C93800E04847 /* streamNgin */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		55BCE8811CD4C93800E04847 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55BCE8BB1CD4EBF100E04847 /* 7.plist in Resources */,
+				55BCE8AC1CD4DCB300E04847 /* 1.plist in Resources */,
+				55BCE8961CD4C93800E04847 /* LaunchScreen.storyboard in Resources */,
+				55BCE8931CD4C93800E04847 /* Assets.xcassets in Resources */,
+				55BCE8B21CD4E9BF00E04847 /* 2.plist in Resources */,
+				55BCE8B51CD4E9BF00E04847 /* 5.plist in Resources */,
+				55BCE8B31CD4E9BF00E04847 /* 3.plist in Resources */,
+				55BCE8A51CD4D72E00E04847 /* block_tile.tiff in Resources */,
+				55BCE8B41CD4E9BF00E04847 /* 4.plist in Resources */,
+				55BCE8BC1CD4EBF100E04847 /* 8.plist in Resources */,
+				55BCE8BD1CD4EBF100E04847 /* 9.plist in Resources */,
+				55BCE8BA1CD4EBF100E04847 /* 6.plist in Resources */,
+				55BCE8A61CD4D72E00E04847 /* free_tile.tiff in Resources */,
+				55BCE8911CD4C93800E04847 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		55BCE87F1CD4C93800E04847 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55BCE88E1CD4C93800E04847 /* SNGMapViewController.m in Sources */,
+				55BCE88B1CD4C93800E04847 /* SNGAppDelegate.m in Sources */,
+				55BCE8A21CD4C9A800E04847 /* SNGTile.m in Sources */,
+				55BCE89F1CD4C96300E04847 /* SNGChunk.m in Sources */,
+				55BCE8881CD4C93800E04847 /* main.m in Sources */,
+				55BCE8AA1CD4D94D00E04847 /* SNGMap.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		55BCE88F1CD4C93800E04847 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				55BCE8901CD4C93800E04847 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		55BCE8941CD4C93800E04847 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				55BCE8951CD4C93800E04847 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		55BCE8981CD4C93800E04847 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		55BCE8991CD4C93800E04847 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		55BCE89B1CD4C93800E04847 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = streamNgin/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.thevoidsoftware.streamNgin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		55BCE89C1CD4C93800E04847 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = streamNgin/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.thevoidsoftware.streamNgin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		55BCE87E1CD4C93800E04847 /* Build configuration list for PBXProject "streamNgin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55BCE8981CD4C93800E04847 /* Debug */,
+				55BCE8991CD4C93800E04847 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		55BCE89A1CD4C93800E04847 /* Build configuration list for PBXNativeTarget "streamNgin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55BCE89B1CD4C93800E04847 /* Debug */,
+				55BCE89C1CD4C93800E04847 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 55BCE87B1CD4C93800E04847 /* Project object */;
+}
