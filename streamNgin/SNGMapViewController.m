@@ -12,7 +12,8 @@
 
 
 #define TILE_SIZE		128
-#define TILE_OVERLAP_H	44
+#define TILE_OVERLAP_H	45
+#define ROW_OFFSET		44
 #define TILE_OVERLAP_V	84
 
 
@@ -58,25 +59,7 @@
 
 -(void)	createViewsForChunkObject: (SNGChunk*)chunk withTopLeftRect: (CGRect)box
 {
-	NSUInteger	x = 1;
-	CGRect		currBox = box;
-	for( SNGTile* currTile in chunk.tiles )
-	{
-		UIImageView*	tileView = [[UIImageView alloc] initWithFrame: currBox];
-		tileView.image = currTile.image;
-		[self.view addSubview: tileView];
-		
-		if( (x % rowLength) == 0 )	// End of row? Wrap!
-		{
-			currBox.origin.x = box.origin.x;
-			currBox.origin.y += TILE_SIZE -TILE_OVERLAP_V;
-		}
-		else
-			currBox.origin.x += TILE_SIZE -TILE_OVERLAP_H;
-		x++;
-	}
 	NSLog(@"===== %@ =====", chunk.filePath.lastPathComponent);
-	
 	if( CGRectGetMinX(box) > 0 )
 	{
 		SNGChunk	*	nextChunk = chunk.westChunk;
@@ -97,6 +80,48 @@
 	}
 	else
 		NSLog(@"\tWest offscreen.");
+	
+	if( CGRectGetMinY(box) > 0 )
+	{
+		SNGChunk	*	nextChunk = chunk.northChunk;
+		if( nextChunk && nextChunk.generation != chunk.generation )	// Have chunk next to us and we didn't already create it this time through?
+		{
+			NSLog(@"\tNorth <<");
+			CGRect	nextTopLeftRect = box;
+			nextTopLeftRect.origin.x += ROW_OFFSET * rowLength;
+			nextTopLeftRect.origin.y -= (TILE_SIZE -TILE_OVERLAP_V) * rowLength;
+			nextChunk.generation = chunk.generation;
+			NSLog(@"\t\tGeneration: %lu", (unsigned long)chunk.generation);
+			[self createViewsForChunkObject: nextChunk withTopLeftRect: nextTopLeftRect];
+			NSLog(@">>");
+		}
+		else if( nextChunk )
+			NSLog(@"\tNorth already exists.");
+		else
+			NSLog(@"\tNorth not given.");
+	}
+	else
+		NSLog(@"\tNorth offscreen.");
+	
+	NSUInteger	x = 1;
+	NSUInteger	row = 0;
+	CGRect		currBox = box;
+	for( SNGTile* currTile in chunk.tiles )
+	{
+		UIImageView*	tileView = [[UIImageView alloc] initWithFrame: currBox];
+		tileView.image = currTile.image;
+		[self.view addSubview: tileView];
+		
+		if( (x % rowLength) == 0 )	// End of row? Wrap!
+		{
+			row++;
+			currBox.origin.x = box.origin.x -(ROW_OFFSET * row);
+			currBox.origin.y += TILE_SIZE -TILE_OVERLAP_V;
+		}
+		else
+			currBox.origin.x += TILE_SIZE -TILE_OVERLAP_H;
+		x++;
+	}
 	
 	if( (CGRectGetMinX(box) +(box.size.width * rowLength)) < self.view.bounds.size.width )
 	{
@@ -119,27 +144,6 @@
 	else
 		NSLog(@"\tEast offscreen.");
 	
-	if( CGRectGetMinY(box) > 0 )
-	{
-		SNGChunk	*	nextChunk = chunk.northChunk;
-		if( nextChunk && nextChunk.generation != chunk.generation )	// Have chunk next to us and we didn't already create it this time through?
-		{
-			NSLog(@"\tNorth <<");
-			CGRect	nextTopLeftRect = box;
-			nextTopLeftRect.origin.y -= (TILE_SIZE -TILE_OVERLAP_V) * rowLength;
-			nextChunk.generation = chunk.generation;
-			NSLog(@"\t\tGeneration: %lu", (unsigned long)chunk.generation);
-			[self createViewsForChunkObject: nextChunk withTopLeftRect: nextTopLeftRect];
-			NSLog(@">>");
-		}
-		else if( nextChunk )
-			NSLog(@"\tNorth already exists.");
-		else
-			NSLog(@"\tNorth not given.");
-	}
-	else
-		NSLog(@"\tNorth offscreen.");
-	
 	if( (CGRectGetMinY(box) +(box.size.height * rowLength)) < self.view.bounds.size.height )
 	{
 		SNGChunk	*	nextChunk = chunk.southChunk;
@@ -147,6 +151,7 @@
 		{
 			NSLog(@"\tSouth <<");
 			CGRect	nextTopLeftRect = box;
+			nextTopLeftRect.origin.x -= ROW_OFFSET * rowLength;
 			nextTopLeftRect.origin.y += (TILE_SIZE -TILE_OVERLAP_V) * rowLength;
 			nextChunk.generation = chunk.generation;
 			NSLog(@"\t\tGeneration: %lu", (unsigned long)chunk.generation);
