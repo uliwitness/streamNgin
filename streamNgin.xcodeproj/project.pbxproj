@@ -27,6 +27,7 @@
 		55BCE8BB1CD4EBF100E04847 /* 7.plist in Resources */ = {isa = PBXBuildFile; fileRef = 55BCE8B71CD4EBF100E04847 /* 7.plist */; };
 		55BCE8BC1CD4EBF100E04847 /* 8.plist in Resources */ = {isa = PBXBuildFile; fileRef = 55BCE8B81CD4EBF100E04847 /* 8.plist */; };
 		55BCE8BD1CD4EBF100E04847 /* 9.plist in Resources */ = {isa = PBXBuildFile; fileRef = 55BCE8B91CD4EBF100E04847 /* 9.plist */; };
+		55BCE8C01CD504BC00E04847 /* SNGTileView.m in Sources */ = {isa = PBXBuildFile; fileRef = 55BCE8BF1CD504BC00E04847 /* SNGTileView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,8 @@
 		55BCE8B71CD4EBF100E04847 /* 7.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = 7.plist; path = Map/7.plist; sourceTree = "<group>"; };
 		55BCE8B81CD4EBF100E04847 /* 8.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = 8.plist; path = Map/8.plist; sourceTree = "<group>"; };
 		55BCE8B91CD4EBF100E04847 /* 9.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = 9.plist; path = Map/9.plist; sourceTree = "<group>"; };
+		55BCE8BE1CD504BC00E04847 /* SNGTileView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNGTileView.h; sourceTree = "<group>"; };
+		55BCE8BF1CD504BC00E04847 /* SNGTileView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNGTileView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +102,8 @@
 				55BCE89E1CD4C96300E04847 /* SNGChunk.m */,
 				55BCE8A01CD4C9A800E04847 /* SNGTile.h */,
 				55BCE8A11CD4C9A800E04847 /* SNGTile.m */,
+				55BCE8BE1CD504BC00E04847 /* SNGTileView.h */,
+				55BCE8BF1CD504BC00E04847 /* SNGTileView.m */,
 				55BCE8AD1CD4DCBB00E04847 /* Map */,
 				55BCE88F1CD4C93800E04847 /* Main.storyboard */,
 				55BCE8921CD4C93800E04847 /* Assets.xcassets */,
@@ -230,6 +235,7 @@
 				55BCE8A21CD4C9A800E04847 /* SNGTile.m in Sources */,
 				55BCE89F1CD4C96300E04847 /* SNGChunk.m in Sources */,
 				55BCE8881CD4C93800E04847 /* main.m in Sources */,
+				55BCE8C01CD504BC00E04847 /* SNGTileView.m in Sources */,
 				55BCE8AA1CD4D94D00E04847 /* SNGMap.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

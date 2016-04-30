@@ -9,12 +9,7 @@
 #import "SNGMapViewController.h"
 #import "SNGChunk.h"
 #import "SNGTile.h"
-
-
-#define TILE_SIZE		128
-#define TILE_OVERLAP_H	45
-#define ROW_OFFSET		44
-#define TILE_OVERLAP_V	84
+#import "SNGTileView.h"
 
 
 @interface SNGMapViewController ()
@@ -108,8 +103,8 @@
 	CGRect		currBox = box;
 	for( SNGTile* currTile in chunk.tiles )
 	{
-		UIImageView*	tileView = [[UIImageView alloc] initWithFrame: currBox];
-		tileView.image = currTile.image;
+		SNGTileView*	tileView = [[SNGTileView alloc] initWithFrame: currBox];
+		[tileView setImage: currTile.image forState: UIControlStateNormal];
 		[self.view addSubview: tileView];
 		
 		if( (x % rowLength) == 0 )	// End of row? Wrap!
