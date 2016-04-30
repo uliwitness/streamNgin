@@ -56,6 +56,7 @@
 {
 	NSLog(@"===== %@ =====", chunk.filePath.lastPathComponent);
 	if( CGRectGetMinX(box) > 0 )
+	if( CGRectGetMinX(box) >= 0 )
 	{
 		SNGChunk	*	nextChunk = chunk.westChunk;
 		if( nextChunk && nextChunk.generation != chunk.generation )	// Have chunk next to us and we didn't already create it this time through?
@@ -77,6 +78,7 @@
 		NSLog(@"\tWest offscreen.");
 	
 	if( CGRectGetMinY(box) > 0 )
+	if( CGRectGetMinY(box) >= 0 )
 	{
 		SNGChunk	*	nextChunk = chunk.northChunk;
 		if( nextChunk && nextChunk.generation != chunk.generation )	// Have chunk next to us and we didn't already create it this time through?
@@ -120,7 +122,7 @@
 		x++;
 	}
 	
-	if( (CGRectGetMinX(box) +(box.size.width * rowLength)) < self.view.bounds.size.width )
+	if( (CGRectGetMinX(box) +((TILE_SIZE -TILE_OVERLAP_H) * rowLength)) < self.view.bounds.size.width )
 	{
 		SNGChunk	*	nextChunk = chunk.eastChunk;
 		if( nextChunk && nextChunk.generation != chunk.generation )	// Have chunk next to us and we didn't already create it this time through?
@@ -141,7 +143,7 @@
 	else
 		NSLog(@"\tEast offscreen.");
 	
-	if( (CGRectGetMinY(box) +(box.size.height * rowLength)) < self.view.bounds.size.height )
+	if( (CGRectGetMinY(box) +((TILE_SIZE -TILE_OVERLAP_V) * rowLength)) < self.view.bounds.size.height )
 	{
 		SNGChunk	*	nextChunk = chunk.southChunk;
 		if( nextChunk && nextChunk.generation != chunk.generation )	// Have chunk next to us and we didn't already create it this time through?
