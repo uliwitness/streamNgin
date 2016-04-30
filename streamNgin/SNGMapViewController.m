@@ -54,51 +54,49 @@
 
 -(void)	createViewsForChunkObject: (SNGChunk*)chunk withTopLeftRect: (CGRect)box
 {
-	NSLog(@"===== %@ =====", chunk.filePath.lastPathComponent);
-	if( CGRectGetMinX(box) > 0 )
+	//NSLog(@"===== %@ =====", chunk.filePath.lastPathComponent);
 	if( CGRectGetMinX(box) >= 0 )
 	{
 		SNGChunk	*	nextChunk = chunk.westChunk;
 		if( nextChunk && nextChunk.generation != chunk.generation )	// Have chunk next to us and we didn't already create it this time through?
 		{
-			NSLog(@"\tWest <<");
+			//NSLog(@"\tWest <<");
 			CGRect	nextTopLeftRect = box;
 			nextTopLeftRect.origin.x -= (TILE_SIZE -TILE_OVERLAP_H) * rowLength;
 			nextChunk.generation = chunk.generation;
-			NSLog(@"\t\tGeneration: %lu", (unsigned long)chunk.generation);
+			//NSLog(@"\t\tGeneration: %lu", (unsigned long)chunk.generation);
 			[self createViewsForChunkObject: nextChunk withTopLeftRect: nextTopLeftRect];
-			NSLog(@">>");
+			//NSLog(@">>");
 		}
 		else if( nextChunk )
-			NSLog(@"\tWest already exists.");
+			;//NSLog(@"\tWest already exists.");
 		else
-			NSLog(@"\tWest not given.");
+			;//NSLog(@"\tWest not given.");
 	}
 	else
-		NSLog(@"\tWest offscreen.");
+		;//NSLog(@"\tWest offscreen.");
 	
-	if( CGRectGetMinY(box) > 0 )
 	if( CGRectGetMinY(box) >= 0 )
 	{
 		SNGChunk	*	nextChunk = chunk.northChunk;
 		if( nextChunk && nextChunk.generation != chunk.generation )	// Have chunk next to us and we didn't already create it this time through?
 		{
-			NSLog(@"\tNorth <<");
+			//NSLog(@"\tNorth <<");
 			CGRect	nextTopLeftRect = box;
 			nextTopLeftRect.origin.x += ROW_OFFSET * rowLength;
 			nextTopLeftRect.origin.y -= (TILE_SIZE -TILE_OVERLAP_V) * rowLength;
 			nextChunk.generation = chunk.generation;
-			NSLog(@"\t\tGeneration: %lu", (unsigned long)chunk.generation);
+			//NSLog(@"\t\tGeneration: %lu", (unsigned long)chunk.generation);
 			[self createViewsForChunkObject: nextChunk withTopLeftRect: nextTopLeftRect];
-			NSLog(@">>");
+			//NSLog(@">>");
 		}
 		else if( nextChunk )
-			NSLog(@"\tNorth already exists.");
+			;//NSLog(@"\tNorth already exists.");
 		else
-			NSLog(@"\tNorth not given.");
+			;//NSLog(@"\tNorth not given.");
 	}
 	else
-		NSLog(@"\tNorth offscreen.");
+		;//NSLog(@"\tNorth offscreen.");
 	
 	NSUInteger	x = 1;
 	NSUInteger	row = 0;
@@ -127,43 +125,43 @@
 		SNGChunk	*	nextChunk = chunk.eastChunk;
 		if( nextChunk && nextChunk.generation != chunk.generation )	// Have chunk next to us and we didn't already create it this time through?
 		{
-			NSLog(@"\tEast <<");
+			//NSLog(@"\tEast <<");
 			CGRect	nextTopLeftRect = box;
 			nextTopLeftRect.origin.x += (TILE_SIZE -TILE_OVERLAP_H) * rowLength;
 			nextChunk.generation = chunk.generation;
-			NSLog(@"\t\tGeneration: %lu", (unsigned long)chunk.generation);
+			//NSLog(@"\t\tGeneration: %lu", (unsigned long)chunk.generation);
 			[self createViewsForChunkObject: nextChunk withTopLeftRect: nextTopLeftRect];
-			NSLog(@">>");
+			//NSLog(@">>");
 		}
 		else if( nextChunk )
-			NSLog(@"\tEast already exists.");
+			;//NSLog(@"\tEast already exists.");
 		else
-			NSLog(@"\tEast not given.");
+			;//NSLog(@"\tEast not given.");
 	}
 	else
-		NSLog(@"\tEast offscreen.");
+		;//NSLog(@"\tEast offscreen.");
 	
 	if( (CGRectGetMinY(box) +((TILE_SIZE -TILE_OVERLAP_V) * rowLength)) < self.view.bounds.size.height )
 	{
 		SNGChunk	*	nextChunk = chunk.southChunk;
 		if( nextChunk && nextChunk.generation != chunk.generation )	// Have chunk next to us and we didn't already create it this time through?
 		{
-			NSLog(@"\tSouth <<");
+			//NSLog(@"\tSouth <<");
 			CGRect	nextTopLeftRect = box;
 			nextTopLeftRect.origin.x -= ROW_OFFSET * rowLength;
 			nextTopLeftRect.origin.y += (TILE_SIZE -TILE_OVERLAP_V) * rowLength;
 			nextChunk.generation = chunk.generation;
-			NSLog(@"\t\tGeneration: %lu", (unsigned long)chunk.generation);
+			//NSLog(@"\t\tGeneration: %lu", (unsigned long)chunk.generation);
 			[self createViewsForChunkObject: nextChunk withTopLeftRect: nextTopLeftRect];
-			NSLog(@">>");
+			//NSLog(@">>");
 		}
 		else if( nextChunk )
-			NSLog(@"\tSouth already exists.");
+			;//NSLog(@"\tSouth already exists.");
 		else
-			NSLog(@"\tSouth not given.");
+			;//NSLog(@"\tSouth not given.");
 	}
 	else
-		NSLog(@"\tSouth offscreen.");
+		;//NSLog(@"\tSouth offscreen.");
 }
 
 @end
